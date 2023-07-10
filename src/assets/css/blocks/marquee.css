@@ -1,0 +1,45 @@
+.marquee-container  {
+	display: flex;
+	justify-content: center;
+}
+
+.marquee-container > div {
+	display: flex;
+	gap: var(--gutter);
+	overflow: hidden;
+	padding-inline: var(--gutter);
+	max-inline-size: var(--wrapper-max-width, 85rem);
+}
+
+.marquee {
+	overflow: hidden;
+	display: flex;
+	gap: var(--space-s-m);
+}
+
+
+.marquee ul,
+.marquee li {
+	display: flex;
+	align-items: center;
+	gap: var(--space-s);
+}
+
+.marquee ul {
+	flex-shrink: 0;
+	justify-content: space-around;
+	gap: var(--space-s-m);
+	animation: scroll 5s linear infinite;
+	animation-play-state: var(--animation-play-state);
+}
+
+@keyframes scroll {
+	from {
+		transform: translateX(0);
+	}
+
+	to {
+		transform: translateX(calc(-100% - var(--space-s-m)));
+	}
+}
+
