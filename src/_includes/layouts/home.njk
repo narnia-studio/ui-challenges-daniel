@@ -27,10 +27,13 @@
 		<title>{{title}}</title>
 	</head>
 	<body>
-		{# {%- include "partials/site-header.njk" -%} #}
 		<h1>Hellooooo</h1>
 		<main tabindex="-1" id="main" class="flow">
-			{% block content %}{% endblock %}
+		{%- include "components/password.njk" -%}
 		</main>
+
+		<script>
+			{%- include "components/password.js" -%}
+		</script>
 	</body>
 </html>
